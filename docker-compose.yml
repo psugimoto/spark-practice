@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jupyter:
+    image: jupyter/pyspark-notebook
+    user: root
+    ports:
+     - "8888:8888"
+    volumes:
+     - ./work:/home/jovyan/work
+    environment:
+     - GRANT_SUDO=yes
